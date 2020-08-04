@@ -1,0 +1,16 @@
+body  {
+  background-color: #282c34;
+  color: white;
+  font-size: 14px;
+}
+
+.content-block {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  perspective: 300px;
+}
+
+.App-link {
+  color: #61dafb;
+}

@@ -1,0 +1,57 @@
+$autocompleteWidth: 200px;
+
+.autocomplete-input {
+  padding: 6px 12px;
+  width: $autocompleteWidth;
+  border: none;
+  box-sizing: border-box;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+ul.autocomplete-options {
+  border: 1px solid white;
+  width: $autocompleteWidth;
+  box-sizing: border-box;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  margin: 0;
+  font-size: 12px;
+  max-height: 250px;
+  overflow-y: auto;
+  margin: 6px 0;
+
+  animation-name: rotation;
+  animation-duration: 0.1s;
+  transform-origin: top;
+  
+  p { 
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:nth-child(2) {
+      font-size: 10px;
+    }
+  }
+  li {
+    padding: 4px 12px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    
+    &.focused, &:hover {
+      background-color: #484c54;
+    }
+
+    mark {
+      background-color: #BA9EB0;
+    }
+  }
+}
+
+@keyframes rotation {
+  from { transform: rotateX(-82deg);}
+  to { transform: rotateX(0deg);}
+}
